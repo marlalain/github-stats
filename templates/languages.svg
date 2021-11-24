@@ -17,51 +17,81 @@ svg {
 
 foreignObject {
   width: calc(100% - 10px - 32px);
-  height: calc(100% - 10px - 32px);
+  height: calc(100% - 10px - 24px);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
-}
-
-th {
-  padding: 0.5em;
-  padding-top: 0;
-  text-align: left;
-  font-size: 14px;
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  line-height: 24px;
+  font-size: 16px;
   font-weight: 600;
   color: rgb(112, 164, 252);
+  fill: rgb(112, 164, 252);
 }
 
-td {
-  margin-bottom: 16px;
-  margin-top: 8px;
-  padding: 0.25em;
-  font-size: 12px;
-  line-height: 18px;
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   color: rgb(56, 188, 173);
 }
 
-tr {
-  transform: translateX(-200%);
+li {
+  display: inline-flex;
+  font-size: 12px;
+  margin-right: 2ch;
+  align-items: center;
+  flex-wrap: nowrap;
+  transform: translateX(-500%);
   animation-duration: 2s;
   animation-name: slideIn;
   animation-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
-.octicon {
-  fill: rgb(190, 144, 242);
-  margin-right: 1ch;
-  vertical-align: top;
-}
-
 @keyframes slideIn {
   to {
     transform: translateX(0);
   }
+}
+
+div.ellipsis {
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.octicon {
+  fill: rgb(190, 144, 242);
+  margin-right: 0.5ch;
+  vertical-align: top;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  overflow: hidden;
+  background-color: rgb(225, 228, 232);
+  border-radius: 6px;
+  outline: 1px solid transparent;
+  margin-bottom: 1em;
+}
+
+.progress-item {
+  outline: 2px solid rgb(225, 228, 232);
+  border-collapse: collapse;
+}
+
+.lang {
+  font-weight: 600;
+  margin-right: 4px;
+  color: rgb(56, 188, 173);
+}
+
+.percent {
+  color: rgb(56, 188, 173);
 }
 </style>
 <g>
